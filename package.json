@@ -21,11 +21,11 @@
     "style:watch": "npm run style -- --watch --map",
     "theme": "postcss --config postcss.config.js --output ./dist/talkie-default.min.css ./src/theme/default/index.css",
     "theme:watch": "npm run theme -- --watch --map",
-    "bundle": "browserify src/index.ts -dv -p licensify -p tsify | exorcist ./dist/talkie.min.js.map > ./dist/talkie.min.js",
-    "bundle:watch": "watchify src/index.ts -dv -p licensify -p tsify -o 'exorcist ./dist/talkie.min.js.map > ./dist/talkie.min.js'",
-    "minify:js": "uglifyjs ./dist/talkie.min.js -m -c --comments '/Modules in this bundle/' -o ./dist/talkie.min.js",
-    "build": "npm run bundle && npm run css && npm run minify:js",
-    "watch": "npm run bundle:watch & npm run css:watch",
+    "rollup": "rollup -c",
+    "rollup:watch": "npm run rollup -- --watch",
+    "minify:js": "uglifyjs ./dist/talkie.min.js -m -c --comments '/Modules in this rollup/' -o ./dist/talkie.min.js",
+    "build": "npm run rollup && npm run css && npm run minify:js",
+    "watch": "npm run rollup:watch & npm run css:watch",
     "patch": "release-it patch -c release.json",
     "minor": "release-it minor -c release.json",
     "major": "release-it major -c release.json"
@@ -48,10 +48,10 @@
   "homepage": "https://github.com/ahomu/Talkie",
   "dependencies": {
     "keycode": "^2.1.8",
-    "markdown-it": "^8.1.0",
+    "markdown-it": "^8.3.1",
     "object-assign": "^4.1.0",
     "release-it": "^2.7.3",
-    "rxjs": "5.1.0"
+    "rxjs": "^5.4.1"
   },
   "devDependencies": {
     "@types/markdown-it": "0.0.2",
@@ -78,10 +78,17 @@
     "postcss-csso": "^2.0.0",
     "postcss-import": "^9.0.0",
     "power-assert": "^1.2.0",
+    "rollup": "^0.43.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-watch": "^4.0.0",
     "serve": "^3.0.0",
     "sinon": "^2.0.0-pre",
     "tsify": "^3.0.0",
-    "typescript": "^2.0.10",
+    "typescript": "^2.3.4",
     "uglifyjs": "^2.4.10",
     "watchify": "^3.7.0"
   }

@@ -2,7 +2,7 @@
 
 'use strict';
 
-import assign = require('object-assign');
+import assign from 'object-assign';
 
 export function toArray<T>(list: CSSStyleDeclaration|NodeList|HTMLCollection|IArguments|NamedNodeMap): T[] {
   return Array.prototype.slice.call(list);

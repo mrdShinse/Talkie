@@ -2,7 +2,7 @@
 
 'use strict';
 
-import MarkdownIt = require('markdown-it');
+import MarkdownIt from 'markdown-it';
 import { toArray } from './util';
 
 interface SlideOption {

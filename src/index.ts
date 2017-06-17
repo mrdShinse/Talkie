@@ -70,7 +70,7 @@ interface TalkieExports {
   jump$: Subject<number>;
 }
 
-(window as any).Talkie = function main(givenOptions: TalkieOptions = {}): TalkieExports {
+export default function Talkie(givenOptions: TalkieOptions = {}): TalkieExports {
 
   const options = extend(defaults(givenOptions, {
     api            : false,

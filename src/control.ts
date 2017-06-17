@@ -15,7 +15,7 @@ import 'rxjs/add/operator/takeUntil';
 import 'rxjs/add/operator/skip';
 import 'rxjs/add/operator/throttleTime';
 
-import keycode = require('keycode');
+import keycode from 'keycode';
 
 const KEY_UP$ = Observable.fromEvent(document, 'keyup');
 const KEY_DOWN$ = Observable.fromEvent(document, 'keydown');
