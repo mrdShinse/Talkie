@@ -64,7 +64,7 @@
     "eslint": "^3.10.2",
     "exorcist": "^0.4.0",
     "karma": "^1.1.0",
-    "karma-browserify": "^5.0.5",
+    "karma-browserify": "5.1.1",
     "karma-chrome-launcher": "^2.0.0",
     "karma-cli": "^1.0.1",
     "karma-firefox-launcher": "^1.0.0",
