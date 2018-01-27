@@ -83,6 +83,6 @@
     "tsify": "^3.0.0",
     "typescript": "^2.0.10",
     "uglifyjs": "^2.4.10",
-    "watchify": "^3.7.0"
+    "watchify": "^3.10.0"
   }
 }
